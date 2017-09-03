@@ -1,0 +1,50 @@
+{
+  "title" : "Une Famille en Or",
+  "jingle" : true,
+  "leftTeam" : "Famille Gauche",
+  "rightTeam" : "Famille Droite",
+  "logo" : "",
+  "questions" : [{
+    "label" : "Hormis du thé que peut-on consomer à l'heure du thé ?",
+    "answers" : [{
+          "label" : "CAFE",
+          "value" : 42
+        },{
+          "label" : "BOISSON CHOCOLATEE",
+          "value": 18
+        },{
+          "label" : "TISANE/INFUSION",
+          "value": 14
+        },{
+          "label" : "GATEAUX",
+          "value": 10
+        },{
+          "label" : "JUS DE FRUIT",
+          "value": 8
+        },{
+          "label" : "BIERE",
+          "value": 3
+      }]
+    },{
+      "label" : "Quel est le moyen le plus couramment utilisé pour retrouver un animal domestique qui s'est perdu ?",
+      "answers" : [{
+            "label" : "ANNONCE DANS JOURNAL",
+            "value" : 32
+          },{
+            "label" : "SPA",
+            "value": 32
+          },{
+            "label" : "POLICE/GENDARMERIE",
+            "value": 9
+          },{
+            "label" : "AFFICHE COMMERCANTS",
+            "value": 6
+          },{
+            "label" : "AFFICHE DANS LA RUE",
+            "value": 4
+          },{
+            "label" : "EN PARLER AUX VOISINS",
+            "value": 4
+        }]
+  }]
+}

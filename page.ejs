@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title><%= title %></title>
+  <script type="text/javascript"  src="index.js"></script>
+  <link href="index.css" rel="stylesheet" title="Default Style"/>
+</head>
+<body class="container page-<%=page%>">
+  <div class="logo selected">
+    <img src="<%=logo%>"/>
+  </div>
+  <% for(var i=0; i<questions.length; i++) {%>
+    <div class="question unselected" id="question-<%=i%>">
+      <div class="question-label"><%=questions[i].label%></div>
+      <div class="answers">
+        <% for(var j=0; j<questions[i].answers.length; j++) {%>
+          <div id="question-<%=i%>-answer-<%=j%>" class="answer answer-<%=j%>">
+            <div class="back-control">
+              <button onSubmit="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, value : <%=questions[i].answers[j].value%>, side : 'left')">Gauche</button>
+            </div>
+            <label><%=questions[i].answers[j].label%></label><value><%=questions[i].answers[j].value%></value>
+            <div class="back-control">
+              <button onSubmit="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, value : <%=questions[i].answers[j].value%>, side : 'right')">Droite</button>
+            </div>
+          </div>
+        <% } %>
+      </div>
+    </div>
+    <button onSubmit="send('go', {questionIndex : <%=i+1%>})">NEXT</button>
+    <button onSubmit="send('go', {questionIndex : <%=i-1%>})">BACK</button>
+  <% } %>
+  <div class="back-control">
+    <button onSubmit="send('wrong')">WRONG</button>
+    <button onSubmit="send('reset')">RESET</button>
+  </div>
+</body>
+</html>
