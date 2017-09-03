@@ -1,0 +1,26 @@
+{
+  "name": "famille-en-or",
+  "version": "1.0.0",
+  "description": "Une famille en or - french TV show game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/piercus/familleEnOr.git"
+  },
+  "keywords": [
+    "tv",
+    "show",
+    "french",
+    "famille",
+    "or"
+  ],
+  "author": "Pierre Colle",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/piercus/familleEnOr/issues"
+  },
+  "homepage": "https://github.com/piercus/familleEnOr#readme"
+}
