@@ -1,9 +1,8 @@
-var onLoading = function(){
-  fns.reset();
-};
+
+
 
 var send = function(message, options){
-
+  socket.emit(message, options)
 };
 
 var fns = {
@@ -48,4 +47,15 @@ var fns = {
 
 var onMessage = function(message, options){
   fns[message](options);
+};
+
+var onLoading = function(){
+  socket.connect("");
+  fns.reset();
+  var socket = io();
+  var events = ["wrong", "go", "answer", "reset"];
+
+  for(var i = 0; i < events.length; i++){
+    socket.on(events[i], onMessage.bind(this, events[i]));
+  }
 };

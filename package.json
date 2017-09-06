@@ -22,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/piercus/familleEnOr/issues"
   },
-  "homepage": "https://github.com/piercus/familleEnOr#readme"
+  "homepage": "https://github.com/piercus/familleEnOr#readme",
+  "dependencies": {
+    "express": "^4.15.4",
+    "socket.io": "^2.0.3"
+  }
 }
