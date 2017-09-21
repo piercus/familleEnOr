@@ -13,7 +13,6 @@
   "keywords": [
     "tv",
     "show",
-    "french",
     "famille",
     "or"
   ],
@@ -24,6 +23,7 @@
   },
   "homepage": "https://github.com/piercus/familleEnOr#readme",
   "dependencies": {
+    "bootstrap": "^4.0.0-beta",
     "express": "^4.15.4",
     "socket.io": "^2.0.3"
   }

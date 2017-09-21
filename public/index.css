@@ -1,0 +1,164 @@
+@font-face {
+  font-family: 'SixCaps';
+  src: url('SixCaps.ttf');
+}
+@font-face {
+  font-family: 'leaguegothic';
+  src: url('leaguegothic-condensed-regular-webfont.ttf');
+}
+@font-face {
+  font-family: 'lldot';
+  src: url('LLDOT2__.TTF');
+}
+body {
+  background-color: #bbd7c9;
+}
+.question-table {
+  background-color : #bbd7c9;
+}
+.non-media .media{
+  display : none;
+}
+.non-answers .answers{
+  display : none;
+}
+.team-name {
+  font-family: 'leaguegothic';
+  font-size: 30px;
+  padding : 10px;
+  text-align: center;
+  border: 3px solid grey;
+  margin: 0px;
+  color: black;
+  background-color: white;
+  word-wrap: break-word;
+}
+.team-points {
+  font-family: 'lldot';
+  font-size: 50px;
+  color : yellow;
+  padding : 10px;
+  text-align: center;
+  border: 3px solid grey;
+  margin: 0px;
+  background-color: black;
+  word-wrap: break-word;
+  font-weight: bold;
+}
+.question-label {
+  font-family: 'leaguegothic';
+  font-size: 40px;
+  padding : 20px;
+  text-align: center;
+  text-transform: uppercase;
+  border: 3px solid white;
+  margin: 10px;
+  color: black;
+  background-color: #dcd4a1;
+}
+.answers {
+  background-color : black;
+  padding : 1px;
+}
+.unselected {
+  display : none;
+}
+
+.page-front .back-control {
+  display : none;
+}
+
+
+.logo{
+  width : 100%;
+  background-color: black;
+}
+
+.answer {
+  border : 2px solid grey;
+  margin : 2px;
+  height: 60px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.page-front .answer.opened {
+  font-size : 60px;
+}
+.page-back .answer {
+  font-size : 60px;
+}
+.page-back .answer.opened value {
+  display : none;
+}
+.page-back .answer.opened .back-control-closed {
+  display : none;
+}
+.page-back .answer button {
+  font-size: 35px;
+  vertical-align: middle;
+  margin: 0px -15px;
+  padding : 2px 12px;
+  float: left;
+}
+.page-back .answer.closed .back-control-opened {
+  display : none;
+}
+.answer.opened {
+  background-color : black;
+  color : #dcd4a1;
+}
+.answer.opened, .page-back .answer.closed {
+  font-family: 'leaguegothic';
+}
+.page-front .answer.closed {
+  padding : 10px;
+  font-family: 'sans-serif';
+  font-size: 22px;
+}
+.answer.closed {
+  background-color : #dcd4a1;
+}
+
+.answer value, .answer label{
+  margin : -15px 0;
+}
+.answer label {
+  text-align:left;
+}
+
+.answer.opened .closed-left-square,
+.answer.opened .closed-number,
+.answer.opened .closed-right-square,
+.page-back  .closed-left-square,
+.page-back .closed-number,
+.page-back .closed-right-square,
+.answer.closed value,
+.page-front .answer.closed label {
+  display: none;
+}
+
+.closed-left-square, .closed-right-square, .closed-number {
+  border: 1px solid black;
+  background-color: #bbd7c9;
+}
+
+.closed-left-square{
+}
+
+.closed-left-square{
+}
+
+.closed-number {
+  color : #749a7f;
+  border-radius: 30px;
+  width : 30px;
+}
+
+.page-front .answer.closed .closed-left-square,
+.page-front .answer.closed .closed-number,
+.page-front .answer.closed .closed-right-square,
+.answer.opened value,
+.answer.opened label  {
+  display: block;
+}

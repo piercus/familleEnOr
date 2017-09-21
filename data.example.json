@@ -3,9 +3,18 @@
   "jingle" : true,
   "leftTeam" : "Famille Gauche",
   "rightTeam" : "Famille Droite",
-  "logo" : "",
+  "logo" : "une-famille-en-or-logo.jpg",
+  "teamLeft" : {
+    "name" : "Left Team",
+    "points" : 0
+  },
+  "teamRight" : {
+    "name" : "Right Team",
+    "points" : 0
+  },
   "questions" : [{
-    "label" : "Hormis du thé que peut-on consomer à l'heure du thé ?",
+    "media" : "<img class='img-fluid' src='./assets/eating.jpg'>",
+    "label" : "Hormis du thé que peut-on consommer à l'heure du thé ?",
     "answers" : [{
           "label" : "CAFE",
           "value" : 42
