@@ -49,8 +49,10 @@ var fns = {
 
   wrong : function(){
     var audioElem = new Audio();
-    audioElem.src = "./assets/wrong.wav";
-    audioElem.play();
+    if(serverData.page === "front"){
+      audioElem.src = "./assets/wrong.wav";
+      audioElem.play();
+    }
     $(".wrong").replaceClass("hidden", "displayed");
     setTimeout(function(){
       $(".wrong").replaceClass("displayed", "hidden");
@@ -84,16 +86,26 @@ var fns = {
       $("#question-"+options.questionIndex+"-answer-"+options.answerIndex+" .cancel-control button")[0].attributes["side"].value = side;
       $(".team-"+side+" .team-points")[0].innerText = teamPoints;
       var audioElem = new Audio();
-      audioElem.src = "./assets/right.wav";
-      audioElem.play();
+      if(serverData.page === "front"){
+        audioElem.src = "./assets/right.wav";
+        audioElem.play();
+      }
     }
   },
 
   media : function(options){
       $("#question-"+options.questionIndex).replaceClass("non-media", "non-answers");
+      if(serverData.page === "front"){
+        var audioElem = $("#carioca")
+        audioElem[0].play();
+      }
   },
   unmedia : function(options){
     $("#question-"+options.questionIndex).replaceClass("non-answers", "non-media");
+    if(serverData.page === "front"){
+      var audioElem = $("#carioca")
+      audioElem[0].pause();
+    }
   },
 
   reset : function(){

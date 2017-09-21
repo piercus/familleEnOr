@@ -22,10 +22,10 @@
   font-size: 10em;
 }
 body {
-  background-color: #bbd7c9;
+  background-color: #DDDDDD;
 }
 .question-table {
-  background-color : #bbd7c9;
+  background-color : #DDDDDD;
 }
 .non-media .media{
   display : none;
@@ -44,9 +44,28 @@ body {
   background-color: white;
   word-wrap: break-word;
 }
+
+.back-control-footer {
+  margin: 20px;
+}
+.page-back  .team-right, .page-back .team-left{
+  position: absolute;
+  display:none;
+}
+.page-back  .back-control-closed, .page-back .back-control-opened {
+  position: absolute;
+  top:0px;
+}
+.page-back  .back-control-closed.control-left  {
+  left: 0px;
+}
+.page-back  .back-control-closed.control-right  {
+  right: 0px;
+}
+
 .team-points {
   font-family: 'lldot';
-  font-size: 50px;
+  font-size: 30px;
   color : yellow;
   padding : 10px;
   text-align: center;
@@ -62,7 +81,7 @@ body {
   padding : 20px;
   text-align: center;
   text-transform: uppercase;
-  border: 3px solid white;
+  border: 3px solid grey;
   margin: 10px;
   color: black;
   background-color: #dcd4a1;
@@ -110,6 +129,9 @@ body {
   margin: 0px -15px;
   padding : 2px 12px;
   float: left;
+}
+.page-back .answer {
+  position: relative;
 }
 .page-back .answer.closed .back-control-opened {
   display : none;

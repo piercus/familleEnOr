@@ -14,6 +14,7 @@
       <img src="<%=logo%>" class="img-fluid mx-auto" style="width: 800px; height: 600px"/>
     </div>
     <div class="back-control">
+      <button onClick="send('jingle', {questionIndex : 0})">START JINGLE</button>
       <button onClick="send('go', {questionIndex : 0})">STOP JINGLE</button>
     </div>
   </div>
@@ -44,8 +45,8 @@
           <div class="answers col-10">
             <% for(var j=0; j<questions[i].answers.length; j++) {%>
               <div id="question-<%=i%>-answer-<%=j%>" class="row justify-content-around answer answer-of-question-<%=i%> <%= questions[i].answers[j].open ? 'opened' : 'closed'%>">
-                <div class="back-control back-control-closed col-1">
-                  <a onClick="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, value : <%=questions[i].answers[j].value%>, side : 'left'})">G</a>
+                <div class="back-control back-control-closed col-1 control-left">
+                  <button onClick="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, value : <%=questions[i].answers[j].value%>, side : 'left'})">G</a>
                 </div>
                 <div class="col-4 closed-left-square">
                 </div>
@@ -58,11 +59,11 @@
 
                 <label class="col-10"><%=questions[i].answers[j].label%></label>
                 <value class="col-2"><%=questions[i].answers[j].value%></value>
-                <div class="back-control back-control-closed col-1">
-                  <a onClick="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, value : <%=questions[i].answers[j].value%>, side : 'right'})">D</a>
+                <div class="back-control back-control-closed col-1 control-right">
+                  <button onClick="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, value : <%=questions[i].answers[j].value%>, side : 'right'})">D</a>
                 </div>
-                <div class="back-control back-control-opened col-2 cancel-control">
-                  <a side="<%=questions[i].answers[j].side%>" onClick="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, cancel : true, value : <%=questions[i].answers[j].value%>})">X</a>
+                <div class="back-control back-control-opened col-2 cancel-control control-right">
+                  <button side="<%=questions[i].answers[j].side%>" onClick="send('answer',{ questionIndex : <%=i%>, answerIndex : <%=j%>, cancel : true, value : <%=questions[i].answers[j].value%>})">X</a>
                 </div>
               </div>
             <% } %>
@@ -72,7 +73,7 @@
               <%-questions[i].media%>
             </div>
           <%}%>
-          <div class="back-control">
+          <div class="back-control back-control-footer">
             <%if(i>0){%><button onClick="send('go', {questionIndex : <%=i-1%>})">BACK</button><%}%>
             <%if(i<questions.length-1){%><button onClick="send('go', {questionIndex : <%=i+1%>})">NEXT</button><%}%>
             <button onClick="send('displayAll', {questionIndex : <%=i%>})">DISPLAY ALL</button>
