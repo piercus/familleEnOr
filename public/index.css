@@ -10,6 +10,17 @@
   font-family: 'lldot';
   src: url('LLDOT2__.TTF');
 }
+.wrong.hidden {
+  display : none;
+}
+.wrong {
+  position: absolute;
+  top: 0px;
+  color: red;
+  z-index: 3;
+  text-align: center;
+  font-size: 10em;
+}
 body {
   background-color: #bbd7c9;
 }
@@ -67,7 +78,6 @@ body {
 .page-front .back-control {
   display : none;
 }
-
 
 .logo{
   width : 100%;

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title><%= title %></title>
   <link rel="stylesheet" href="bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-  <link rel="stylesheet" href="font-awesome.css" />
+  <link rel="stylesheet" href="font-awesome-4.7.0/css/font-awesome.css" />
   <link href="index.css" rel="stylesheet" title="Default Style"/>
 </head>
 <body class="container page-<%=page%>">
@@ -35,7 +35,9 @@
       </div>
     </div>
     <div class="col-8">
-      <i class="fa fa-times fa-5x" aria-hidden="true"></i>
+      <div class="wrong hidden">
+        <i class="fa fa-times fa-5x" aria-hidden="true"></i>
+      </div>
       <% for(var i=0; i<questions.length; i++) {%>
         <div class="non-media question <%= (currentQuestion === i) ? 'selected' : 'unselected'%> row justify-content-around" id="question-<%=i%>">
           <div class="question-label"><%=questions[i].label%></div>

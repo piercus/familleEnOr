@@ -49,7 +49,7 @@ var fns = {
 
   wrong : function(){
     var audioElem = new Audio();
-    audioElem.src = "./wrong.wav";
+    audioElem.src = "./assets/wrong.wav";
     audioElem.play();
     $(".wrong").replaceClass("hidden", "displayed");
     setTimeout(function(){
@@ -73,9 +73,9 @@ var fns = {
         $(".team-"+side+" .team-points")[0].innerText = teamPoints;
         $("#question-"+options.questionIndex+"-answer-"+options.answerIndex+" .cancel-control button")[0].attributes["side"].value = ""
       }
-      var audioElem = new Audio();
+      /*var audioElem = new Audio();
       audioElem.src = "./cancel.wav";
-      audioElem.play();
+      audioElem.play();*/
     } else {
       $("#question-"+options.questionIndex+"-answer-"+options.answerIndex).replaceClass("closed", "opened");
       var side = options.side;
@@ -84,7 +84,7 @@ var fns = {
       $("#question-"+options.questionIndex+"-answer-"+options.answerIndex+" .cancel-control button")[0].attributes["side"].value = side;
       $(".team-"+side+" .team-points")[0].innerText = teamPoints;
       var audioElem = new Audio();
-      audioElem.src = "./answer.wav";
+      audioElem.src = "./assets/right.wav";
       audioElem.play();
     }
   },
